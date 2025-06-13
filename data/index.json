@@ -1,104 +1,142 @@
 {
   "hero": {
-    "title": "Build Blazing-Fast Websites with Nuxt.js & Netlify",
-    "description": "Craft high-performing, SEO-friendly web experiences with the dynamic power of Nuxt.js and the speed of Netlify's global edge network.",
+    "title": "GBTS Builders Solution Ltd",
+    "description": "Offering You The Best Quality Building Materials For The Project You Had Always Wanted.",
     "image": "images/hero.jpg",
-    "imageAlt": "Nuxt logo and title on abstract background",
+    "imageAlt": "GBTS logo and title on abstract background",
     "buttons": [
       {
-        "label": "Get Started Today",
+        "label": "Explore Our Products",
         "url": "https://www.netlify.com/"
-      }
-    ]
-  },
-  "logos": {
-    "title": "Trusted by the world's best",
-    "icons": [
-      {
-        "name": "i-simple-icons-gitlab"
-      },
-      {
-        "name": "i-simple-icons-github"
-      },
-      {
-        "name": "i-simple-icons-openai"
-      },
-      {
-        "name": "i-simple-icons-google"
-      },
-      {
-        "name": "i-simple-icons-netlify"
       }
     ]
   },
   "features": {
-    "title": "Why choose Nuxt.js?",
-    "description": "Nuxt.js is a powerful framework built on top of Vue.js that provides an excellent developer experience.",
+    "title": "Why choose Us?",
+    "description": "Nationwide delivery of all materials at unbeatable speed.",
     "items": [
       {
-        "title": "Server-Side Rendering",
-        "description": "Nuxt.js allows you to build SSR applications with Vue.js, ensuring fast initial page loads and better SEO."
+        "title": "Quality Products",
+        "description": "We sell genuine and durable building products."
       },
       {
-        "title": "Static Site Generation",
-        "description": "You can pre-render pages at build time for static websites. This helps with performance and scalability by serving content directly from a CDN."
-      },
-      {
-        "title": "Auto-Routing",
-        "description": "Nuxt automatically generates routes based on the file structure inside the pages directory, reducing the need for manual configuration."
-      },
-      {
-        "title": "File-based Configuration",
-        "description": "Nuxt uses a convention-over-configuration approach, allowing you to define configurations easily in nuxt.config.js without much boilerplate."
-      },
-      {
-        "title": "Dynamic Imports",
-        "description": "It supports lazy loading of components with dynamic imports to improve performance by splitting the code into smaller chunks."
-      },
-      {
-        "title": "SEO Friendly",
-        "description": "With SSR, SSG, and automatic meta tag handling, Nuxt.js ensures your application is SEO-friendly."
+        "title": "24/7 Support",
+        "description": "Our experts are always ready to help with your inquiries."
       }
     ]
   },
-  "testimonials": {
-    "title": "What Our Users Are Saying",
-    "description": "Hear from our clients about their experiences working with Nuxt and Netlify.",
-    "items": [
+  "sections": [
+    {
+      "title": "Roofings",
+      "subtitle": "Durable Protection, Lasting Beauty",
+      "description": "Discover a wide variety of roofing materials to suit your needs and budget—whether you prefer classic shingles, strong metal sheets, or innovative tiles. Our selection guarantees lasting protection and a beautiful finish for every building.",
+      "image": "/roofings.jpg",
+      "cta": {
+        "label": "Explore Roofings",
+        "url": "/roofings"
+      }
+    },
+    {
+      "title": "Hand Tools",
+      "subtitle": "Precision, Comfort, Reliability",
+      "description": "Equip your toolbox with our high-quality hand tools, crafted for both professionals and DIY enthusiasts. From hammers and screwdrivers to wrenches and pliers, find every tool you need for your next project.",
+      "image": "/hand-tools.jpg",
+      "cta": {
+        "label": "Browse Hand Tools",
+        "url": "/hand-tools"
+      }
+    },
+    {
+      "title": "Locks & Knobs",
+      "subtitle": "Stylish Security, Everyday Convenience",
+      "description": "Secure your home and office with our premium locks and knobs. Choose from a range of stylish designs and robust security features to keep your spaces safe and accessible.",
+      "image": "/Lock-knobs.jpg",
+      "cta": {
+        "label": "See Locks & Knobs",
+        "url": "/locks-knobs"
+      }
+    },
+    {
+      "title": "Security Cameras",
+      "subtitle": "Peace of Mind, Day and Night",
+      "description": "Monitor your property with our advanced security camera systems. From wireless indoor cameras to weatherproof outdoor solutions, enjoy crystal-clear surveillance and remote access for total peace of mind.",
+      "image": "/security-cameras.jpg",
+      "cta": {
+        "label": "Shop Security Cameras",
+        "url": "/security-cameras"
+      }
+    },
+    {
+      "title": "Appliances",
+      "subtitle": "Modern Comfort, Smart Living",
+      "description": "Upgrade your home or office with our range of top-notch appliances. From energy-efficient refrigerators to powerful generators and cooling fans, find reliable solutions that make your everyday life easier.",
+      "image": "/appliances.jpg",
+      "cta": {
+        "label": "View Appliances",
+        "url": "/appliances"
+      }
+    }
+  ],
+  "blogExcerpts": [
+    {
+      "title": "Securing Your Assets",
+      "slug": "an-appraisal-of-innovative-locks-and-cctv",
+      "date": "2025-06-13",
+      "excerpt": "Explore how the use of smart locks and CCTV cameras can raise the security level for your property and valuables.",
+      "author": "Jane Doe",
+      "image": "https://via.placeholder.com/600x400?text=Locks+&+CCTV",
+      "readMoreUrl": "/blog/an-appraisal-of-innovative-locks-and-cctv"
+    },
+    {
+      "title": "Home Renovation Checklist",
+      "slug": "everything-youll-need-before-you-start",
+      "date": "2025-06-10",
+      "excerpt": "Ready to renovate your home? Use this ultimate home renovation checklist to ensure a smooth, stress-free process from start to finish.",
+      "author": "John Smith",
+      "image": "https://via.placeholder.com/600x400?text=Renovation+Checklist",
+      "readMoreUrl": "/blog/everything-youll-need-before-you-start"
+    }
+  ],
+  "footer": {
+    "links": [
+      { "label": "About Us", "url": "/about-us" },
+      { "label": "Contact Us", "url": "/contact-us" },
+      { "label": "Return Policy", "url": "/return-policy" },
+      { "label": "FAQ", "url": "/faq" },
+      { "label": "Terms of Service", "url": "/terms" },
+      { "label": "Privacy Policy", "url": "/privacy-policy" },
+      { "label": "Blog", "url": "/blog-posts" }
+    ],
+    "address": {
+      "line1": "Shop 1 Jubilee Market, Ikare Akoko 342211",
+      "line2": "Ondo State, Nigeria"
+    },
+    "contact": {
+      "email": "ask@gbtsbuildingmaterials.com",
+      "phone": "+2347017742003"
+    },
+    "social": [
       {
-        "quote": "Nuxt has made building our projects so much easier and more enjoyable! Its simple setup and powerful features help us create fast, responsive websites with minimal effort.",
-        "author": {
-          "name": "Daniel H.",
-          "title": "Marketing Specialist at Some Company",
-          "avatar": "images/person-1.jpg"
-        }
+        "platform": "Facebook",
+        "url": "https://facebook.com/profile.php?id=61575683557550"
       },
       {
-        "quote": "The scalability offered by Netlify and the flexibility of Nuxt have allowed us to expand our site's functionality without worrying about performance issues. This combination is a powerful solution for any growing business.",
-        "author": {
-          "name": "Sarah L.",
-          "title": "CEO at Some Company",
-          "avatar": "images/person-2.jpg"
-        }
+        "platform": "Twitter",
+        "url": "https://x.com/gbtsstores"
       },
       {
-        "quote": "Switching to Nuxt and Netlify was a game-changer for our development process. The seamless integration between the two platforms allowed us to deploy faster and with fewer headaches.",
-        "author": {
-          "name": "Mark T.",
-          "title": "Frontend Engineer at Some Company",
-          "avatar": "images/person-3.jpg"
-        }
-      }
-    ]
-  },
-  "cta": {
-    "title": "Start Building with Nuxt & Netlify",
-    "description": "Let your next project be smarter, faster, and effortlessly deployable.",
-    "buttons": [
+        "platform": "Instagram",
+        "url": "https://instagram.com/gbtsstores"
+      },
       {
-        "label": "Get Started Today",
-        "url": "https://www.netlify.com/"
+        "platform": "Pinterest",
+        "url": "https://pinterest.com/gbtsstores"
+      },
+      {
+        "platform": "WhatsApp",
+        "url": "https://wa.me/7017742003"
       }
-    ]
+    ],
+    "copyright": "© 2025 GBTS Builders Solution Ltd."
   }
-} 
+}
