@@ -1,33 +1,58 @@
+<template>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="/">GBTS Builders Solution Ltd</a>
+    </div>
+    <ul class="navbar-links">
+      <li v-for="link in links" :key="link.url">
+        <a :href="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+  </nav>
+</template>
+
 <script setup>
-const menuitems = [
-  {
-    title: "Sign up",
-    url: "https://app.netlify.com/signup",
-  },
-  {
-    title: "Log in",
-    url: "https://app.netlify.com/login",
-  },
-];
+// Example: Accept links as props or hardcode for now
+const links = [
+  { label: "Home", url: "/" },
+  { label: "Roofings", url: "/roofings" },
+  { label: "Hand Tools", url: "/hand-tools" },
+  { label: "Locks & Knobs", url: "/locks-knobs" },
+  { label: "Security Cameras", url: "/security-cameras" },
+  { label: "Appliances", url: "/appliances" },
+  { label: "Blog", url: "/blog-posts" }
+]
 </script>
 
-<template>
-  <Container>
-    <header class="flex flex-row flex-wrap items-center justify-between my-4 gap-x-6 gap-y-4">
-      <div class="flex items-center justify-between">
-        <a href="/" class="text-2xl font-bold text-zinc-800">
-          <span class="text-green-500">&#10070;</span> Nuxt Starter
-        </a>
-      </div>
-      <nav class="flex w-auto">
-        <ul class="flex flex-row gap-3 text-sm">
-          <li v-for="item of menuitems">
-            <a :href="item.url" class="flex px-3 py-2 text-gray-600 border rounded-sm hover:text-gray-800">
-              {{ item.title }}
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </Container>
-</template>
+<style scoped>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #23272b;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+.navbar-brand a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar-links a:hover {
+  color: #2ecc40;
+}
+</style>
