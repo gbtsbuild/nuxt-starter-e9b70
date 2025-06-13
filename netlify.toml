@@ -1,7 +1,16 @@
-## This is the configuration file for Netlify
+## Netlify configuration file for GBTS Builders Solution Ltd project
 ## https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  command = "npm run generate" # how to build your project
-  functions = "netlify/functions" # where Netlify Functions live
-  publish = "dist" # where the built project lives
+  command = "npm run generate"            # Nuxt static site generation
+  functions = "netlify/functions"         # Serverless functions directory (if any)
+  publish = "dist"                        # Output directory for generated static files
+
+[dev]
+  command = "npm run dev"
+  port = 8888
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
