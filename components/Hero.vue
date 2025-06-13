@@ -9,20 +9,32 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-12 mt-10 mb-20 lg:items-center lg:flex-row">
+  <div class="flex flex-col gap-12 mt-12 mb-24 lg:items-center lg:flex-row">
     <div class="flex-1 w-full">
-      <NuxtImg class="rounded-lg" sizes="100vw lg:600px" :src="image" :alt="imageAlt" v-if="image" />
+      <NuxtImg
+        v-if="image"
+        :src="image"
+        :alt="imageAlt"
+        sizes="100vw lg:600px"
+        class="rounded-2xl shadow-lg w-full object-cover"
+      />
     </div>
     <div class="flex-1 w-full">
-      <h1 class="text-4xl font-bold text-zinc-800 sm:text-5xl text-balance" v-if="title">{{ title }}</h1>
-      <p class="max-w-xl mt-4 text-lg text-zinc-600 sm:text-xl" v-if="description">
+      <h1 v-if="title" class="text-4xl font-bold text-zinc-800 sm:text-5xl mb-4">
+        {{ title }}
+      </h1>
+      <p v-if="description" class="max-w-xl text-lg text-zinc-600 sm:text-xl mb-6">
         {{ description }}
       </p>
-      <div class="flex flex-wrap gap-4 mt-8">
-        <div v-for="button of buttons">
-          <NuxtLink v-if="button.label && button.url" :href="button.url"
-            class="inline-flex px-6 py-3 text-white duration-300 bg-green-600 rounded-sm hover:bg-gray-800 transition-color">
-            {{ button.label }}</NuxtLink>
+      <div class="flex flex-wrap gap-4 mt-6">
+        <div v-for="button in buttons" :key="button.label + button.url">
+          <NuxtLink
+            v-if="button.label && button.url"
+            :href="button.url"
+            class="inline-flex px-6 py-3 text-white bg-green-600 rounded-xl font-semibold shadow transition-colors duration-300 hover:bg-green-700"
+          >
+            {{ button.label }}
+          </NuxtLink>
         </div>
       </div>
     </div>
