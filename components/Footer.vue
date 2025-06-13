@@ -1,46 +1,49 @@
 <template>
-  <footer class="footer">
-    <div class="footer-links">
-      <a
-        v-for="link in links"
-        :key="link.url"
-        :href="link.url"
-        class="footer-link"
-      >
-        {{ link.label }}
-      </a>
+  <footer class="bg-white border-t-2 border-green-500 mt-16 pt-10 pb-6 px-4 sm:px-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-8">
+      <!-- Links Section -->
+      <div>
+        <div class="flex flex-wrap gap-4 mb-4">
+          <a v-for="link in links" :key="link.url" :href="link.url" class="text-green-600 hover:text-green-800 font-semibold transition-colors">
+            {{ link.label }}
+          </a>
+        </div>
+        <p class="text-sm text-gray-500">{{ copyright }}</p>
+      </div>
+      <!-- Address & Contact Section -->
+      <div>
+        <address class="not-italic text-gray-700 text-sm mb-2">
+          <div>{{ address.line1 }}</div>
+          <div>{{ address.line2 }}</div>
+        </address>
+        <div class="text-gray-700 text-sm mb-2">
+          Email:
+          <a :href="`mailto:${contact.email}`" class="text-green-700 hover:underline ml-1">{{ contact.email }}</a>
+        </div>
+        <div class="text-gray-700 text-sm">
+          Phone:
+          <a :href="`tel:${contact.phone}`" class="text-green-700 hover:underline ml-1">{{ contact.phone }}</a>
+        </div>
+      </div>
+      <!-- Social Media -->
+      <div class="flex items-center gap-4">
+        <a
+          v-for="s in social"
+          :key="s.platform"
+          :href="s.url"
+          target="_blank"
+          rel="noreferrer"
+          class="text-green-600 hover:text-green-800 text-2xl transition-colors"
+        >
+          <i :class="getIconClass(s.platform)"></i>
+        </a>
+      </div>
     </div>
-    <address>
-      {{ address.line1 }}<br />
-      {{ address.line2 }}<br />
-      Email:
-      <a :href="`mailto:${contact.email}`">
-        {{ contact.email }}
-      </a>
-      <br />
-      Phone:
-      <a :href="`tel:${contact.phone}`">
-        {{ contact.phone }}
-      </a>
-    </address>
-    <div class="social-media">
-      <a
-        v-for="s in social"
-        :key="s.platform"
-        :href="s.url"
-        target="_blank"
-        rel="noreferrer"
-        class="social-link"
-      >
-        <i :class="getIconClass(s.platform)"></i>
-      </a>
-    </div>
-    <p class="copyright">{{ copyright }}</p>
   </footer>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   links: Array,
   address: Object,
   contact: Object,
@@ -49,7 +52,7 @@ defineProps({
 })
 
 function getIconClass(platform) {
-  switch (platform.toLowerCase()) {
+  switch ((platform || '').toLowerCase()) {
     case 'facebook':
       return 'fab fa-facebook-f'
     case 'twitter':
@@ -61,49 +64,7 @@ function getIconClass(platform) {
     case 'whatsapp':
       return 'fab fa-whatsapp'
     default:
-      return ''
+      return 'fas fa-globe'
   }
 }
 </script>
-
-<style scoped>
-.footer {
-  background: #23272b;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-.footer-links {
-  margin-bottom: 1rem;
-}
-.footer-link {
-  margin: 0 0.6rem;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-.footer-link:hover {
-  text-decoration: underline;
-}
-address {
-  font-style: normal;
-  margin-bottom: 1rem;
-}
-.social-media {
-  margin: 1rem 0;
-}
-.social-link {
-  margin: 0 0.5rem;
-  color: #fff;
-  font-size: 1.3rem;
-  transition: color 0.2s;
-}
-.social-link:hover {
-  color: #2ecc40;
-}
-.copyright {
-  font-size: 0.95rem;
-  color: #bbb;
-  margin-top: 1.5rem;
-}
-</style>
