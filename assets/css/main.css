@@ -1,5 +1,8 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@theme {
+/* Custom CSS variables (if needed) */
+:root {
   --font-display: "Helvetica", "sans-serif";
 }
