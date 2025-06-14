@@ -13,7 +13,7 @@
     <div class="hero-content">
       <div class="hero-text">
         <h1>
-          Build Blazing-Fast Projects<br />
+          Your One-Stop-Shop For Building Materials<br />
           with <span class="highlight2">GBTS Builders Solution Ltd</span>
         </h1>
         <p>
@@ -27,16 +27,6 @@
         <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Modern building illustration" />
       </div>
     </div>
-    <div class="trusted-by">
-      <span>Trusted by the world’s best:</span>
-      <div class="brand-logos">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg" alt="Google" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoft.svg" alt="Microsoft" />
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/netlify.svg" alt="Netlify" />
-      </div>
-    </div>
-  </section>
 </template>
 .hero-content {
   display: flex;
