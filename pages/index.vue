@@ -34,14 +34,16 @@
     </section>
 
     <!-- Dynamic Product/Service Sections -->
-    <SectionCard
-      v-for="(section, idx) in content.sections"
-      :key="idx"
-      :section="section"
-    />
+    <div v-if="content.sections && content.sections.length">
+      <SectionCard
+        v-for="(section, idx) in content.sections"
+        :key="idx"
+        :section="section"
+      />
+    </div>
 
     <!-- Blog Excerpts -->
-    <section v-if="content.blogExcerpts?.length" class="bg-gray-50 py-10">
+    <section v-if="content.blogExcerpts && content.blogExcerpts.length" class="bg-gray-50 py-10">
       <h2 class="text-2xl font-bold text-center mb-6">Latest Blog Posts</h2>
       <div class="flex flex-col md:flex-row gap-6 justify-center">
         <div
@@ -67,11 +69,7 @@ import SectionCard from '~/components/SectionCard.vue'
 const content = ref({})
 
 onMounted(async () => {
-  // If your JSON is in /public, use fetch:
   const res = await fetch('/index.json')
   content.value = await res.json()
-
-  // If it's in /assets, use import:
-  // content.value = (await import('~/assets/index.json')).default
 })
 </script>
