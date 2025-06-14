@@ -1,5 +1,5 @@
-export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/tailwindcss',
-  ],
-})
+export default {
+  build: {
+    transpile: ['module-name'],
+  }
+}
