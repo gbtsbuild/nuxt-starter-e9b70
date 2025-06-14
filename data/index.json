@@ -1,9 +1,9 @@
 {
   "hero": {
-    "title": "GBTS Builders Solution Ltd",
+    "title": "Your One-Stop-Shop For Building Materials",
     "description": "Offering You The Best Quality Building Materials For The Project You Had Always Wanted.",
     "image": "images/hero.jpg",
-    "imageAlt": "GBTS logo and title on abstract background",
+    "imageAlt": "Nuxt logo and "title": "GBTS Builders Solution Ltd" on abstract background",
     "buttons": [
       {
         "label": "Explore Our Products",
