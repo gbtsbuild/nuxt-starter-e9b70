@@ -13,11 +13,11 @@
     "nuxt": "3.17.4",
     "nuxt-icon": "^0.6.10",
     "tailwindcss": "^4.0.16",
-    "vue": "^3.4.3",
-    "vue-router": "^4.2.5"
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.19",
+    "@nuxtjs/tailwindcss": "^6.10.1"
   },
   "dependencies": {
-    "@nuxt/image": "^1.10.0",
-    "@tailwindcss/vite": "^4.0.16"
+    "@nuxt/image": "^1.10.0"
   }
 }
