@@ -1,5 +1,8 @@
 export default {
-  build: {
-    transpile: ['module-name'],
-  }
+  modules: [
+    '@nuxtjs/tailwindcss'
+  ],
+  css: [
+    '~/assets/css/main.css'
+  ]
 }
